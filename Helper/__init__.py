@@ -5,7 +5,4 @@ os.makedirs("Graph\\",exist_ok=True)
 os.makedirs("JSON\\",exist_ok=True)
 os.makedirs("Model\\",exist_ok=True)
 os.makedirs("Graph\\",exist_ok=True)
-
-
-
-
+os.makedirs("Checkpoint\\",exist_ok=True)

@@ -10,12 +10,13 @@ def put_labels(data_path, label_path):
    """
     Accepts a label path (in the form of a JSON) and creates a JSON file
    """
-   onlyfiles = [f for f in os.listdir(data_path) if os.path.isfile(os.path.join(data_path, f))]
+   onlyfiles = [f for f in os.listdir(data_path) if not os.path.isfile(os.path.join(data_path, f))]
    dic={}
    dic["label"]=onlyfiles
    dic["no_label"]=len(onlyfiles)
+
    with open(label_path, "w") as outfile:
-      json.dump(dic, outfile)
+      json.dump(dic, outfile,indent=4)
 
 def get_labels(label_path):
     """
