@@ -6,12 +6,11 @@ import matplotlib.pyplot as plt
 import tensorflow as tf
 from tqdm import tqdm
 
-def put_labels(Data_path,label_path):
+def put_labels(data_path, label_path):
    """
-    Accepts a label path (in the form of a JSON) and creates a file
-    as a Python object.
+    Accepts a label path (in the form of a JSON) and creates a JSON file
    """
-   onlyfiles = [f for f in os.listdir(Data_path) if os.isfile(os.join(Data_path, f))]
+   onlyfiles = [f for f in os.listdir(data_path) if os.path.isfile(os.join(data_path, f))]
    with open(label_path, "w") as outfile:
     json.dump(onlyfiles, outfile)
 
