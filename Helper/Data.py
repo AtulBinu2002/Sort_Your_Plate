@@ -12,7 +12,7 @@ def put_labels(Data_path,label_path):
     as a Python object.
    """
    onlyfiles = [f for f in os.listdir(Data_path) if os.isfile(os.join(Data_path, f))]
-   with open("sample.json", "w") as outfile:
+   with open(label_path, "w") as outfile:
     json.dump(onlyfiles, outfile)
 
 def get_labels(label_path):
